@@ -1,4 +1,4 @@
-package com.tutorial.java.methodreferenceexample;
+package com.tutorial.java.method.reference.example;
 
 public class Main {
 

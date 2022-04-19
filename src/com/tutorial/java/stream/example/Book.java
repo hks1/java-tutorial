@@ -1,4 +1,4 @@
-package com.tutorial.java.streamexample;
+package com.tutorial.java.stream.example;
 
 public class Book {
     private String author;

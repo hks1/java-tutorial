@@ -1,4 +1,4 @@
-package com.tutorial.java.deadlock_example;
+package com.tutorial.java.deadlock.example;
 
 public class Kitchen {
 

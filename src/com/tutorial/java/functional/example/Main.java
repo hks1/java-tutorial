@@ -1,4 +1,4 @@
-package com.tutorial.java.functionalinterfaceexample;
+package com.tutorial.java.functional.example;
 
 public class Main {
 

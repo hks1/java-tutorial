@@ -1,4 +1,4 @@
-package com.tutorial.java.scannerexample;
+package com.tutorial.java.scanner.example;
 
 import java.util.Scanner;
 

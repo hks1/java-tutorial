@@ -1,4 +1,4 @@
-package com.tutorial.java.runnable_interface;
+package com.tutorial.java.runnable.example;
 
 public class Main {
     public static void main(String[] args) {

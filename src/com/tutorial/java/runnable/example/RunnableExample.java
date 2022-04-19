@@ -1,4 +1,4 @@
-package com.tutorial.java.runnable_interface;
+package com.tutorial.java.runnable.example;
 
 public class RunnableExample implements Runnable{
     // In java you only allow to extend one class
