@@ -23,5 +23,6 @@ public class ParallelStreamExample {
                 })
                 .collect(Collectors.toList());
         System.out.println(processedWords);
+        //words.forEach(c -> System.out.println(c));
     }
 }
