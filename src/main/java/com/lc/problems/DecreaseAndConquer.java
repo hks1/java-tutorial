@@ -72,11 +72,59 @@ public class DecreaseAndConquer {
     public int maxSubArray(int[] nums) {
         int maxSum = Integer.MIN_VALUE;
         int currSum = 0;
-        for(int i = 0; i < nums.length; i++){
+        /*for(int i = 0; i < nums.length; i++){
             currSum = Math.max(currSum + nums[i], nums[i]);
+            maxSum = Math.max(maxSum, currSum);
+        }*/
+        for(int i: nums){
+            currSum = Math.max(currSum + i, i);
             maxSum = Math.max(maxSum, currSum);
         }
         return maxSum;
+    }
+
+    //121. Best Time to Buy and Sell Stock
+    //You are given an array prices where prices[i] is the price of a given stock on the ith day.
+    //
+    //You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+    //
+    //Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+    public int maxProfit(int[] prices) {
+        int maxProfit = 0;
+        int minPrice = Integer.MAX_VALUE;
+        /*for(int i = 0;i < prices.length; i++){
+            minPrice = Math.min(minPrice, prices[i]);
+            maxProfit = Math.max(maxProfit, prices[i] - minPrice);
+        }*/
+        for(int price : prices){
+            minPrice = Math.min(minPrice, price);
+            maxProfit = Math.max(maxProfit, price - minPrice);
+        }
+        return maxProfit;
+    }
+
+    // 221. Maximal Square
+    //Given an m x n binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.
+    public int maximalSquare(int[][] matrix) {
+        int max = 0;
+        int[][] table = new int[matrix.length][matrix[0].length];
+        for(int i = 0; i < matrix.length; i++){
+            table[i][0] = matrix[i][0];
+            max = Math.max(max, table[i][0]);
+        }
+        for(int i = 0; i < matrix[0].length; i++){
+            table[0][i] = matrix[0][i];
+            max = Math.max(max, table[0][i]);
+        }
+        for(int row = 1; row < table.length; row++){
+            for(int col = 1; col < table[row].length; col++){
+                if(matrix[row][col] == 1){
+                    table[row][col] = Math.min(Math.min(table[row-1][col], table[row-1][col-1]), table[row][col-1]) + 1;
+                    max = Math.max(max, table[row][col]);
+                }
+            }
+        }
+        return max*max;
     }
 }
 
