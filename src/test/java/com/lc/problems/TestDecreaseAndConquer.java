@@ -30,7 +30,7 @@ public class TestDecreaseAndConquer {
     }
     //240. Search a 2D Matrix II
     @Test
-    @DisplayName("240. Search a 2D Matrix II")
+    @DisplayName("//240. Search a 2D Matrix II")
     public void testSearchMatrix(){
         int[][] matrix = {{1,4,7,11,15},{2,5,8,12,19},{3,6,9,16,22},{10,13,14,17,24},{18,21,23,26,30}};
         Assertions.assertEquals(true, obj.searchMatrix(matrix, 5));
@@ -42,5 +42,18 @@ public class TestDecreaseAndConquer {
     public void testMaxSubArray(){
         int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
         Assertions.assertEquals(6, obj.maxSubArray(arr));
+    }
+    //121. Best Time to Buy and Sell Stock
+    @Test
+    @DisplayName("//121. Best Time to Buy and Sell Stock")
+    public void testMaxProfit(){
+        int[] stocks = {7,1,5,3,6,4};
+        Assertions.assertEquals(5, obj.maxProfit(stocks));
+    }
+    // 221. Maximal Square
+    @Test
+    @DisplayName("// 221. Maximal Square")
+    public void testMaximalSquare(){
+
     }
 }
