@@ -12,7 +12,7 @@ class MedianFinder {
         maxQ = new PriorityQueue<>(10, (a,b) ->  b - a);
     }
 
-    public void addNum(int num) {
+    /*public void addNum(int num) {
         // max of first section of the stream
         if(maxQ.size() == 0) {
             maxQ.add(num);
@@ -42,13 +42,35 @@ class MedianFinder {
                 minQ.add(maxQ.remove());
         }
         //System.out.println(":after while" + maxQ + " " + minQ);
+    }*/
+    public void addNum(int num) {
+        // assumption: maxQ.size() == minQ.size() OR maxQ.size() == minQ.size()
+        if(maxQ.size() == 0){
+            maxQ.offer(num);
+        }else if(num < maxQ.peek()){
+            maxQ.offer(num);
+            // balance heaps
+            if(maxQ.size() > minQ.size() + 1)
+                minQ.offer(maxQ.poll());
+        }else{
+            minQ.offer(num);
+            // balance heaps
+            if(minQ.size() > maxQ.size())
+                maxQ.offer(minQ.poll());
+        }
     }
 
-    public double findMedian() {
+    /*public double findMedian() {
         //System.out.println(maxQ + " " + minQ);
         if(maxQ.size() > minQ.size()) return maxQ.peek();
         else if(minQ.size() > maxQ.size()) return minQ.peek();
         else return (maxQ.peek() + minQ.peek()) / 2.0;
+    }*/
+    public double findMedian() {
+        if(maxQ.size() > minQ.size())
+            return maxQ.peek();
+        else
+            return (maxQ.peek() + minQ.peek()) / 2.0;
     }
 }
 
