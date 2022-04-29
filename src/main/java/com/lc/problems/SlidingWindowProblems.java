@@ -142,7 +142,118 @@ public class SlidingWindowProblems {
     //
     //Return the max sliding window.
     public int[] maxSlidingWindow(int[] nums, int k) {
-        return new int[]{0};
+        int[] result = new int[nums.length - k + 1];
+        int index = 0;
+        ArrayDeque<Integer> deq = new ArrayDeque<>();
+        for(int i = 0; i < k ; i++){
+            while(!deq.isEmpty() && deq.peekLast() <= nums[i]){
+                deq.removeLast();
+            }
+            deq.offerLast(nums[i]);
+        }
+        result[index++] = deq.peekFirst();
+        for(int i = k; i < nums.length; i++){
+            if(deq.peekFirst() == nums[i-k]){
+                deq.pollFirst();
+            }
+            while(!deq.isEmpty() && deq.peekLast() <= nums[i]){
+                deq.pollLast();
+            }
+            deq.offerLast(nums[i]);
+            result[index++] = deq.peekFirst();
+        }
+        return result;
+    }
+
+    //567. Permutation in String
+    //Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.
+    //
+    //In other words, return true if one of s1's permutations is the substring of s2.
+    public boolean checkInclusion(String s1, String s2) {
+        if(s1.length() > s2.length()) return false;
+        int k = s1.length();
+        Map<Character, Integer> s1map = new HashMap<>();
+        Map<Character, Integer> s2map = new HashMap<>();
+        // build map for s1
+        for (int i = 0; i < k; i++){
+            s1map.put(s1.charAt(i), s1map.getOrDefault(s1.charAt(i), 0) + 1);
+        }
+        // initialize s2 map (of s2.length())
+        for(int i = 0; i < k; i++){
+            s2map.put(s2.charAt(i), s2map.getOrDefault(s2.charAt(i), 0) + 1);
+        }
+        if(s2map.equals(s1map)) return true;
+        for(int i = k; i < s2.length(); i++){
+            s2map.put(s2.charAt(i-k), s2map.get(s2.charAt(i-k)) - 1);
+            if(s2map.get(s2.charAt(i-k)) == 0) s2map.remove(s2.charAt(i-k));
+            s2map.put(s2.charAt(i), s2map.getOrDefault(s2.charAt(i), 0) + 1);
+            if(s2map.equals(s1map)) return true;
+        }
+        return false;
+    }
+
+    // 438. Find All Anagrams in a String
+    //Given two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.
+    //
+    //An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+    public List<Integer> findAnagrams(String s, String p) {
+        List<Integer> result = new ArrayList<>();
+        if(p.length() > s.length()) return result;
+        int k = p.length();
+        Map<Character, Integer> smap = new HashMap<>();
+        Map<Character, Integer> pmap = new HashMap<>();
+        for(int i = 0; i < k; i++){
+            pmap.put(p.charAt(i), pmap.getOrDefault(p.charAt(i), 0) + 1);
+            smap.put(s.charAt(i), smap.getOrDefault(s.charAt(i), 0) + 1);
+        }
+        if(smap.equals(pmap)) result.add(0);
+        for(int i = k; i < s.length(); i++){
+            char c = s.charAt(i-k);
+            smap.put(c, smap.get(c) - 1);
+            if(smap.get(c) == 0) smap.remove(c);
+            smap.put(s.charAt(i), smap.getOrDefault(s.charAt(i), 0) + 1);
+            if(smap.equals(pmap)) result.add(i-k+1);
+        }
+        return result;
+    }
+
+    // 480. Sliding Window Median
+    //The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle values.
+    //
+    //For examples, if arr = [2,3,4], the median is 3.
+    //For examples, if arr = [1,2,3,4], the median is (2 + 3) / 2 = 2.5.
+    //You are given an integer array nums and an integer k. There is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position.
+    //
+    //Return the median array for each window in the original array. Answers within 10-5 of the actual value will be accepted.
+    public double[] medianSlidingWindow(int[] nums, int k) {
+        // heap as balanced BST
+        return new double[]{0.0};
+    }
+
+    // 209. Minimum Size Subarray Sum
+    //Given an array of positive integers nums and a positive integer target, return the minimal length of a contiguous subarray [numsl, numsl+1, ..., numsr-1, numsr] of which the sum is greater than or equal to target. If there is no such subarray, return 0 instead.
+    public int minSubArrayLen(int target, int[] nums) {
+        return 0;
+    }
+
+    // 713. Subarray Product Less Than K
+    //Given an array of integers nums and an integer k, return the number of contiguous subarrays where the product of all the elements in the subarray is strictly less than k.
+    public int numSubarrayProductLessThanK(int[] nums, int k) {
+        return 0;
+    }
+
+    // 1658. Minimum Operations to Reduce X to Zero
+    //You are given an integer array nums and an integer x. In one operation, you can either remove the leftmost or the rightmost element from the array nums and subtract its value from x. Note that this modifies the array for future operations.
+    //
+    //Return the minimum number of operations to reduce x to exactly 0 if it is possible, otherwise, return -1.
+    public int minOperations(int[] nums, int x) {
+        return 0;
+    }
+
+    // 1004. Max Consecutive Ones III
+    //Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's.
+    public int longestOnes(int[] nums, int k) {
+        return 0;
     }
 }
 

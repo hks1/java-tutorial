@@ -5,6 +5,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 public class TestSlidingWindowProblems {
     SlidingWindowProblems obj;
     @BeforeEach
@@ -72,5 +74,60 @@ public class TestSlidingWindowProblems {
     public void testMaxSlidingWindow(){
         Assertions.assertArrayEquals(new int[]{3,3,5,5,6,7}, obj.maxSlidingWindow(new int[]{1,3,-1,-3,5,3,6,7}, 3));
         Assertions.assertArrayEquals(new int[]{1}, obj.maxSlidingWindow(new int[]{1}, 1));
+        Assertions.assertArrayEquals(new int[]{1, -1}, obj.maxSlidingWindow(new int[]{1, -1}, 1));
+        Assertions.assertArrayEquals(new int[]{11}, obj.maxSlidingWindow(new int[]{9, 11}, 2));
+        Assertions.assertArrayEquals(new int[]{4}, obj.maxSlidingWindow(new int[]{4, -2}, 2));
+    }
+    //567. Permutation in String
+    @Test
+    @DisplayName("//567. Permutation in String")
+    public void testCheckInclusion(){
+        Assertions.assertTrue(obj.checkInclusion("ab", "eidbaooo"));
+        Assertions.assertFalse(obj.checkInclusion("ab", "eidboaoo"));
+
+    }
+    // 438. Find All Anagrams in a String
+    @Test
+    @DisplayName("// 438. Find All Anagrams in a String")
+    public void testFindAnagrams(){
+        //new int[]{0,6}
+        Assertions.assertEquals(Arrays.asList(0,6), obj.findAnagrams("cbaebabacd", "abc"));
+        Assertions.assertEquals(Arrays.asList(0,1,2), obj.findAnagrams("abab", "ab"));
+        Assertions.assertEquals(Arrays.asList(1,3,5), obj.findAnagrams("werreer", "er"));
+        //Assertions.assertEquals(Arrays.asList(1,3,5), obj.findAnagrams("werreer", ""));
+    }
+    // 480. Sliding Window Median
+    @Test
+    @DisplayName("// 480. Sliding Window Median")
+    public void testMedianSlidingWindow(){
+        Assertions.assertArrayEquals(new double[]{1.00000,-1.00000,-1.00000,3.00000,5.00000,6.00000}, obj.medianSlidingWindow(new int[]{1,3,-1,-3,5,3,6,7}, 3));
+        Assertions.assertArrayEquals(new double[]{2.00000,3.00000,3.00000,3.00000,2.00000,3.00000,2.00000}, obj.medianSlidingWindow(new int[]{1,2,3,4,2,3,1,4,2}, 3));
+    }
+    // 209. Minimum Size Subarray Sum
+    @Test
+    @DisplayName("// 209. Minimum Size Subarray Sum")
+    public void testMinSubArrayLen(){
+
+    }
+    // // 713. Subarray Product Less Than K
+    @Test
+    @DisplayName("// 713. Subarray Product Less Than K")
+    public void testNumSubarrayProductLessThanK(){
+
+    }
+    // 1658. Minimum Operations to Reduce X to Zero
+    @Test
+    @DisplayName("// 1658. Minimum Operations to Reduce X to Zero")
+    public void testMinOperations(){
+        Assertions.assertEquals(2, obj.minOperations(new int[]{1,1,4,2,3}, 5));
+        Assertions.assertEquals(-1, obj.minOperations(new int[]{5,6,7,8,9}, 4));
+        Assertions.assertEquals(5, obj.minOperations(new int[]{3,2,20,1,1,3}, 10));
+    }
+    // 1004. Max Consecutive Ones III
+    @Test
+    @DisplayName("// 1004. Max Consecutive Ones III")
+    public void testLongestOnes(){
+        Assertions.assertEquals(6, obj.longestOnes(new int[]{1,1,1,0,0,0,1,1,1,1,0}, 2));
+        Assertions.assertEquals(10, obj.longestOnes(new int[]{0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1}, 3));
     }
 }

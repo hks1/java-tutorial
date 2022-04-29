@@ -63,6 +63,9 @@ class TDMedianFinder{
         MedianFinder obj = new MedianFinder();
         obj.addNum(-1);
         System.out.println(obj.findMedian());
+        double med = obj.findMedian();
+        assert med != -0.0 : "fail";
+        System.out.println(med);
         obj.addNum(-2);
         System.out.println(obj.findMedian());
         obj.addNum(-3);
