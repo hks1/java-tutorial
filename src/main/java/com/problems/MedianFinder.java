@@ -2,6 +2,7 @@ package com.problems;
 
 import java.util.PriorityQueue;
 
+// C:\Users\hkson\.jdks\openjdk-15.0.2\bin\java  -cp ./target/classes -ea --enable-preview com.problems.TDMedianFinder
 // median from Data Stream
 class MedianFinder {
     PriorityQueue<Integer> minQ;
@@ -86,8 +87,8 @@ class TDMedianFinder{
         obj.addNum(-1);
         System.out.println(obj.findMedian());
         double med = obj.findMedian();
-        assert med != -0.0 : "fail";
-        System.out.println(med);
+        assert med != -0.0 : "test case failed";
+        System.out.println("median is" + med);
         obj.addNum(-2);
         System.out.println(obj.findMedian());
         obj.addNum(-3);
