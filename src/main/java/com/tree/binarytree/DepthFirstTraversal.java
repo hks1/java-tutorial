@@ -4,6 +4,8 @@ package com.tree.binarytree;
  * Interface for DFS on a binary tree
  */
 
+// We implement the visiting during traversal using the visitor design pattern, i.e., we create a visitor object which we pass to the traversal method.
+
 public interface DepthFirstTraversal {
     /**
      * Traverse the tree in pre-order and calls the NodeVisitor.visit(Node) method on each node
