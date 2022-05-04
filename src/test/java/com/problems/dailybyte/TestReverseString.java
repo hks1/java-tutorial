@@ -15,6 +15,6 @@ public class TestReverseString {
         Assertions.assertEquals("civic", obj.reverse("civic"));
         Assertions.assertEquals("taC", obj.reverse("Cat"));
         Assertions.assertEquals("etyB yliaD ehT", obj.reverse("The Daily Byte"));
-        Assertions.assertEquals("etyB yliaD ehT", obj.reverse("The Daily Byte1"));
+        Assertions.assertEquals("etyB yliaD ehT", obj.reverse("The Daily Byte"));
     }
 }
