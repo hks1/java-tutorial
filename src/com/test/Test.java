@@ -24,6 +24,12 @@ public class Test<T, S, U, V> {
     }
 }
 
+class Multiply {
+    public static Double multiply(Double a, Double b) {
+        return a * b;
+    }
+
+}
 class Main{
     public static void main(String[] args) {
         GenericDemo<String> genericDemo = new GenericDemo<>();
@@ -35,6 +41,8 @@ class Main{
 
         Test test1 = new Test(1, "2", "test", "another one");
         System.out.println(test1);
+
+        System.out.println(Multiply.multiply(new Double(2), new Double(3)));
 
     }
 }
