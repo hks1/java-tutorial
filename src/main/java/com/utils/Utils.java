@@ -2,6 +2,7 @@ package com.utils;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.List;
 
 public final class Utils {
 
@@ -51,6 +52,18 @@ public final class Utils {
         arr[i] = arr[j];
         arr[j] = temp;
     }
+
+    public Integer[] listToArray(List<Integer> list){
+        return list.toArray(new Integer[0]);
+    }
+
+    public int[] listToIntArray(List<Integer> list){
+        return list.stream().mapToInt(i -> i).toArray();
+    }
+
+    /*public List<Integer> arrayToList(int[] arr){
+        return Arrays.asList(arr);
+    }*/
 
 }
 
