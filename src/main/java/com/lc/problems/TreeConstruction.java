@@ -61,7 +61,7 @@ class TDTreeConstruction{
         int[] postorder = new int[]{9,15,7,20,3};
         TreeNode root = obj.createTree(inorder, postorder);
         TreeNode root1 = obj.createTree(new int[]{1,2}, new int[]{2,1});
-        System.out.println(com.lc.tree.Traversal.preorderTraversal(root1));
+        //System.out.println(com.lc.tree.Traversal.preorderTraversal(root1));
         //TreeNode root2 = obj.createTree(new int[]{2,1}, new int[]{2,1});
         //System.out.println(com.lc.tree.Traversal.preorderTraversal(root2));
 
