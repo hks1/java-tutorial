@@ -65,10 +65,22 @@ public final class Utils {
         return Arrays.asList(arr);
     }*/
 
+    public static String padRight(String s, int n) {
+        return String.format("%-" + n + "s", s); //"%-20s"
+    }
+
+    public static String padLeft(String s, int n) {
+        return String.format("%" + n + "s", s); //"%20s"
+    }
+
+
 }
 
 class TDUtils{
     public static void main(String[] args) {
         System.out.println(Utils.toBase64(123456789));
+
+        System.out.println(Utils.padRight("Howto", 20) + "*");
+        System.out.println(Utils.padLeft("Howto", 20) + "*");
     }
 }
