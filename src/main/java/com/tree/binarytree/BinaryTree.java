@@ -18,3 +18,10 @@ public interface BinaryTree {
 // A perfect binary tree is a full binary tree in which all leaves have the same depth. A perfect binary tree of height h has n = 2h+1-1 nodes and l = 2h leaves.
 // In a balanced binary tree, each node's left and right subtrees differ in height by at most one.
 // In a sorted binary tree (also known as ordered binary tree), the left subtree of a node contains only values less than (or equal to) the value of the parent node, and the right subtree contains only values greater than (or equal to) the value of the parent node. Such a data structure is also called a binary search tree.
+
+// other resources - move these to appropriate files
+//https://www.happycoders.eu/algorithms/heapsort/#What_is_a_Heap
+// https://www.happycoders.eu/algorithms/java-stack-class/#why-you-should-not-use-stack-anymore
+// https://www.happycoders.eu/java/switch-expression/
+
+

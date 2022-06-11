@@ -11,5 +11,14 @@ public class Main {
         List<Integer> list = traversal.preorderTraversal(tree);
         System.out.println(list.toString());
 
+        list = traversal.inorderTraversal(tree);
+        System.out.println(list.toString());
+
+        list = traversal.postorderTwoStacks(tree);
+        System.out.println(list);
+
+        list = traversal.postorderOneStack(tree);
+        System.out.println(list);
+
     }
 }

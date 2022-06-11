@@ -2,6 +2,7 @@ package com.utils;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.List;
 
 public final class Utils {
 
@@ -52,10 +53,34 @@ public final class Utils {
         arr[j] = temp;
     }
 
+    public Integer[] listToArray(List<Integer> list){
+        return list.toArray(new Integer[0]);
+    }
+
+    public int[] listToIntArray(List<Integer> list){
+        return list.stream().mapToInt(i -> i).toArray();
+    }
+
+    /*public List<Integer> arrayToList(int[] arr){
+        return Arrays.asList(arr);
+    }*/
+
+    public static String padRight(String s, int n) {
+        return String.format("%-" + n + "s", s); //"%-20s"
+    }
+
+    public static String padLeft(String s, int n) {
+        return String.format("%" + n + "s", s); //"%20s"
+    }
+
+
 }
 
 class TDUtils{
     public static void main(String[] args) {
         System.out.println(Utils.toBase64(123456789));
+
+        System.out.println(Utils.padRight("Howto", 20) + "*");
+        System.out.println(Utils.padLeft("Howto", 20) + "*");
     }
 }

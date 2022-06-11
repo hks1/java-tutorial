@@ -1,6 +1,6 @@
 package com.problems.dailybyte;
 
-import main.java.com.problems.dailybyte.SpotTheDifference;
+import com.problems.dailybyte.SpotTheDifference;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
