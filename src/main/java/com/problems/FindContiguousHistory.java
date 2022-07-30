@@ -5,9 +5,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FindContiguousHistory {
+    // indeed karat
+    // similar to longest common subarray
     public String[] fidContiguousHistory(String[] user0, String[] user1){
         List<String> result = new ArrayList<>();
-        int output = 0;
+        int maxLength = 0;
         int maxIndex = -1;
         int m = user0.length;
         int n = user1.length;
@@ -22,15 +24,15 @@ public class FindContiguousHistory {
             for (int j = 1; j < n+1; j++) {
                 if(user0[i-1].equals(user1[j-1])){
                     dp[i][j] = dp[i-1][j-1] + 1;
-                    if(dp[i][j] > output){
-                        output = dp[i][j];
+                    if(dp[i][j] > maxLength){
+                        maxLength = dp[i][j];
                         maxIndex =  j;
                     }
                 }
             }
 
         }
-        return Arrays.copyOfRange(user1, maxIndex - output , maxIndex );
+        return Arrays.copyOfRange(user1, maxIndex - maxLength , maxIndex ); // maxIndex is exclusive
     }
 }
 
