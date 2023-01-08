@@ -2,6 +2,7 @@
 <!-- creational pattern -->
 Given a superclass with multiple sub-classes and based on input, we need to return one of the sub-class.
 <!-- https://www.digitalocean.com/community/tutorials/factory-design-pattern-in-java -->
+<!-- https://github.com/WebJournal/journaldev/tree/master/java-design-patterns/Factory-Design-Pattern -->
 This pattern takes out the responsibility of the instantiation of a class from the client to the client program to the factory class.
 ## Factory Desing Pattern Super Class
 Super class in factory design pattern can be 
@@ -149,8 +150,14 @@ public class TestFactory {
 
 ```
 
+## Advantages
+1. Provides approach to code for interface rather than implementation.
+2. Removes the instantiation of actual implementation classes from client code. Makes code more rubust, less coupled and easy to extend.    
+3. Provides abstraction between implementation and client classes through inheritance.
 
-
+## Examples in JDK
+1. java.util.Calendar, ResourceBundle and NumberFormat getInstance() method uses Factory Pattern.
+2. valueOf() method in wrapper classes like Boolean, Integer, etc.
 
 
 
