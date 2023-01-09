@@ -12,3 +12,37 @@ Define an interface or abstract class for creating an object but let the subclas
 2. When a class wants that it's subclasses specify the objects to be created.
 3. When the parent classes choose the creation of objects to its subclasses.
 
+## UML for Factory Method Pattern
+1. Plan - abstract class, and concrete classes that extends the Plan abstract class
+2. A factory class, GetPlanFactory
+3. GenerateBill class will use GetPlanFactory to get a Plan object. It'll pass information (planType - DOMESTICPLAN / COMMERCIALPLAN / INSTITUTIONALPLAN) to GetPlanFactory to get the type of object it needs.
+
+```mermaid
+classDiagram
+class Plan{
+<<abstract class>>
+#double rate
++getRate() void
++calculate Bill(units) void
+}
+class DomesticPlan{
++getRate() void
+}
+class CommercialPlan{
++getRate() void
+}
+class InstitutionalPlan{
++getRate() void
+}
+DomesticPlan --|> Plan
+CommercialPlan --|> Plan
+InstitutionalPlan --|> Plan
+class GenerateBill{
++main() void
+}
+class GetPlanFactory{
++getPlan() Plan
+}
+GenerateBill ..|> GetPlanFactory: asks
+GetPlanFactory ..|> Plan: creates
+```
