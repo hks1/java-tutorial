@@ -194,3 +194,52 @@ public class TestAbstractFactoryPattern {
 }
 
 ```
+
+<!-- mermaid class diagram ->
+<!-- https://mermaid.js.org/syntax/classDiagram.html -->
+
+```mermaid
+classDiagram
+class ComputerFactory{
+<<Java Class>>
+}
+class ComputerAbstractFactory{
+<<Java Interface>>
+}
+class Computer{
+<<Java Class>>
+}
+class PCFactory{
+<<Java Class>>
+}
+class ServerFactory{
+<<Java Class>>
+}
+class PC{
+<<Java Class>>
+}
+class Server{
+<<Java Class>>
+}
+ComputerFactory ..> ComputerAbstractFactory
+ComputerFactory ..> Computer
+ComputerAbstractFactory ..> Computer
+PCFactory ..|> ComputerAbstractFactory
+ServerFactory ..|> ComputerAbstractFactory
+PCFactory ..> Computer
+ServerFactory ..> Computer
+PCFactory ..> PC
+ServerFactory ..> Server
+PC --|> Computer
+Server --|> Computer
+```
+
+## Benefits
+1. Provides approach to code for interface rather than implementation.
+2. "factory of factories", can be easily exteded to accommodated more products.
+3. robust, avoids conditional logic of Factory pattern.
+
+## JDK examples
+1. javax.xml.parsers.DocumentBuilderFactory#newInstance()
+2. javax.xml.transform.TransformerFactory#newInstance()
+3. javax.xml.xpath.XPathFactory#newInstance()
