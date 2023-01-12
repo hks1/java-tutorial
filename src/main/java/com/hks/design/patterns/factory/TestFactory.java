@@ -1,6 +1,5 @@
 package com.hks.design.patterns.factory;
 
-import com.hks.design.patterns.factory.factory.ComputerFactory;
 import com.hks.design.patterns.model.Computer;
 
 public class TestFactory {

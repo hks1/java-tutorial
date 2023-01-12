@@ -1,4 +1,4 @@
-package com.hks.design.patterns.factory.factory;
+package com.hks.design.patterns.factory;
 
 import com.hks.design.patterns.model.Computer;
 import com.hks.design.patterns.model.PC;
