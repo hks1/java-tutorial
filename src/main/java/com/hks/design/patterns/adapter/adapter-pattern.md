@@ -180,3 +180,42 @@ public class AdapterPatternTest {
 
 ## Class Diagram
 
+```mermaid
+classDiagram
+Socket <|-- SocketClassAdapterImpl
+Socket "-sock 0..1" <-- SocketObjectAdapterImpl
+SocketAdapter <|.. SocketClassAdapterImpl
+SocketAdapter <|.. SocketObjectAdapterImpl
+class Socket{
+<<Java Class>>
++Socket()
++getVolt() Volt
+}
+class SocketAdapter{
+<<Java Interface>>
++get3Volt() Volt
++get12Volt() Volt
++get120Volt() Volt
+}
+class SocketClassAdapterImpl{
+<<Java Class>>
++SocketClassAdapterImpl()
++get3Volt() Volt
++get12Volt() Volt
++get120Volt() Volt
+-convertVolt(Volt, int) Volt
+}
+class SocketObjectAdapterImpl{
+<<Java Class>>
++SocketObjectAdapterImpl()
++get3Volt() Volt
++get12Volt() Volt
++get120Volt() Volt
+-convertVolt(Volt, int) Volt
+}
+```
+
+## Adapter Design Pattern Example in JDK
+- java.util.Arrays#asList()
+- java.io.InputStreamReader(InputStream) (returns a Reader)
+- java.io.OutputSreamWriter(OutputStream) {returns a Writer)
