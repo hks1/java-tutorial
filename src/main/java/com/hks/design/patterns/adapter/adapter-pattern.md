@@ -115,3 +115,11 @@ class MovableAdapterImplTest {
     }
 }
 ```
+
+## When to use Adapter Pattern
+- When an outside component provides captivating functionality that we'd like to reuse, but it's incompatible with our current application. A suitable adapter can be developed to make them compatible with each other.
+- When our application is not compatible with the interface that our client is expecting.
+- When want to reuse legacy code in our application without making any modification in the original code.
+
+<!-- https://www.baeldung.com/java-adapter-pattern -->
+<!-- https://github.com/eugenp/tutorials/tree/master/patterns-modules/design-patterns-structural -->
