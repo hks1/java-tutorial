@@ -195,3 +195,49 @@ public class ObserverPatternTest {
 ```
 
 ## Class Diagram
+
+```mermaid
+classDiagram
+Observer <|.. MyTopicSubscriber
+Subject <|.. MyTopic
+Subject "-topic 0..1" <-- MyTopicSubscriber
+Observer "-observers 0..*" <-- MyTopic
+class Observer{
+<<Java Interface>>
++update() void
++setSubject(Subject) void
+}
+class Subject{
+<<Java Interface>>
++register(Observer) void
++unregister(Observer) void
++notifyObservers() void
++getUpdate(Observer) Object
+}
+class MyTopicSubscriber{
+<<Java Class>>
+-name String
++MyTopicSubscriber(String)
++update() void
++setSubject(Subject) void
+}
+class MyTopic{
+<<Java Class>>
+-message String
+-changed boolean
+-MUTEX Object
++MyTopic()
++register(Observer) void
++unregister(Observer) void
++notifyObservers() void
++getUpdate(Observer) Object
++postMessage(String) void
+}
+```
+
+Also called public-subscriber pattern.
+
+Some of it's implementations are
+- java.util.EventListener in Swing
+- javax.servlet.http.HttpSessionBindingListener
+- javax.servlet.http.HttpSessionAttributeListener
