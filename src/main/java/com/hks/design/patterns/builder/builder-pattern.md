@@ -19,6 +19,8 @@ We can solve the issues with large number of parameters by providing a construct
 3. Java Builder class should have methods to set the optional parameters and it should return the same Builder object after setting the optional attribute.
 4. Provide a `build()` method in the builder class that will return the Object needed by the client program. For this we need to have a private constructor in the Class with Builder class as argument.
 
+The object creation process is delegated to the Builder class.
+
 ## Example
 Computer class and ComputerBuild class to build it.
 
@@ -107,6 +109,13 @@ public class TestBuilderPattern {
 
 ```
 
-Some of the builder pattern examples in Java classes are:
+## Some of the builder pattern examples in Java classes are:
 - java.lang.StringBuilder#append() (unsyncronized)
 - java.lang.StringBuffer#append() (syncronized)
+
+
+<!--
+https://blogs.oracle.com/javamagazine/post/exploring-joshua-blochs-builder-design-pattern-in-java
+
+https://in-kotlin.com/design-patterns/builder-pattern/
+-->
