@@ -1,4 +1,4 @@
-# Java Tutorial
+# Java
 
 ## Design Patterns
 
