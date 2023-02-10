@@ -1,12 +1,12 @@
 # Java Reflection
 <!-- https://www.digitalocean.com/community/tutorials/java-reflection-example-tutorial -->
 - provides ability to inspect and modify the runtime behavior of the application.
-- can inspect a class, [interface](https://www.digitalocean.com/community/tutorials/interface-in-java), [enum](https://www.digitalocean.com/community/tutorials/java-enum), get their structure, methods and fields information at runtime even though class is not accessbile at compile time.
+- can inspect a class, [interface](#java-reflection), [enum](#java-reflection), get their structure, methods and fields information at runtime even though class is not accessbile at compile time.
 - can be used to instantiate an object, invoke it's methods, change field values.
 
 Some examples of frameworks that use java reflection:
 1. __JUnit__ - Uses reflection to parse @Test annotation to get the test methods and then invoke them.
-2. __Spring__ - dependency injection,  [Spring Dependency Injection](https://www.digitalocean.com/community/tutorials/spring-dependency-injection)
+2. __Spring__ - dependency injection,  [Spring Dependency Injection](#java-reflection)
 3. __Tomcat__ web container to forward the request to correct module by parsing their web.xml and request URI.
 4. __Eclipse__ auto completion of method names
 5. __Struts__
@@ -27,8 +27,8 @@ object
 
 __java.lang.Class__ is the entry point for all reflection operations.
 
-For every type of object, [JVM](https://www.digitalocean.com/community/tutorials/difference-jdk-vs-jre-vs-jvm) instantiate an [immutable](https://www.digitalocean.com/community/tutorials/how-to-create-immutable-class-in-java) instance of `java.lang.Class` that provides methods to examine the runtime properties of the object and create new objects, invoke it's method and get/set object fields.
-[inheritence](https://www.digitalocean.com/community/tutorials/inheritance-java-example)
+For every type of object, [JVM](#java-reflection) instantiate an [immutable](#java-reflection) instance of `java.lang.Class` that provides methods to examine the runtime properties of the object and create new objects, invoke it's method and get/set object fields.
+[inheritence](#java-reflection)
 
 public interface BaseInterface
 
@@ -47,3 +47,11 @@ for primitive types and arrays
 
 Wrapper classes provide another static variable `TYPE` to get the class
 
+<!--
+[interface](https://www.digitalocean.com/community/tutorials/interface-in-java) 
+[enum](https://www.digitalocean.com/community/tutorials/java-enum)
+[Spring Dependency Injection](https://www.digitalocean.com/community/tutorials/spring-dependency-injection)
+[JVM](https://www.digitalocean.com/community/tutorials/difference-jdk-vs-jre-vs-jvm)
+[immutable](https://www.digitalocean.com/community/tutorials/how-to-create-immutable-class-in-java)
+[inheritence](https://www.digitalocean.com/community/tutorials/inheritance-java-example)
+-->
