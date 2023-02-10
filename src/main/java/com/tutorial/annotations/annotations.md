@@ -4,12 +4,12 @@ provides information about the code.
 
 1. Built-in Java annotations
 2. Write Custom Annotation
-3. Annotations usage and parsing them using [Reflection API](https://www.digitalocean.com/community/tutorials/java-reflection-example-tutorial)
+3. Annotations usage and parsing them using [Reflection API](//#)
 
 used in
 - Hibernate
-- [Jersey](https://www.digitalocean.com/community/tutorials/jersey-java-tutorial)
-- [Spring](https://www.digitalocean.com/community/tutorials/spring-tutorial-spring-core-tutorial)
+- [Jersey](//#)
+- [Spring](//#)
 
 Java Annotation is metadata about the program, embedded in the program itself.
 
@@ -17,7 +17,7 @@ Java Annotation is metadata about the program, embedded in the program itself.
 - specify annotation availability to either compile time only or till runtime
 
 <!--
-Before java annotations, program metadata was available through java comments or by Javadoc but annotation offers more than that. Annotations metadata can be available at runtime too and annotation parsers can use it to determine the process flow. For example, in [Jersey webservice](https://www.digitalocean.com/community/tutorials/jersey-java-tutorial) we add PATH annotation with URI string to a method and at runtime, jersey parses it to determine the method to invoke for given URI pattern.
+Before java annotations, program metadata was available through java comments or by Javadoc but annotation offers more than that. Annotations metadata can be available at runtime too and annotation parsers can use it to determine the process flow. For example, in [Jersey webservice](//#) we add PATH annotation with URI string to a method and at runtime, jersey parses it to determine the method to invoke for given URI pattern.
 -->
 
 ## Java Custom Annotation
@@ -55,7 +55,7 @@ public @interface MethodInfo {
 1. @Override
 2. @Deprecated
 3. @SupressWarnings
-4. @FunctionalInterface - introduced in [java8](https://www.digitalocean.com/community/tutorials/java-8-features-with-examples) to indicate that the interface is intended to be [functional interface](https://www.digitalocean.com/community/tutorials/java-8-functional-interfaces)
+4. @FunctionalInterface - introduced in [java8](//#) to indicate that the interface is intended to be [functional interface](//#)
 5. @SafeVarargs
 
 ## Java Annotations Example
@@ -131,7 +131,17 @@ public class AnnotationParsing {
 ```
 
 __Java Annotations Update__
-1. Servlet Specs 3.0 introduced use of annotations for Servlet Configuration and init parameters. [Java Servlet Tutorial](https://www.digitalocean.com/community/tutorials/servlet-jsp-tutorial)
-2. We can use annotations in Struts 2 to configure it's action classes and result pages. [Struts 2 Hello World Annotation Example](https://www.digitalocean.com/community/tutorials/struts-2-hello-world-example-with-annotations-and-without-struts-xml-file)
+1. Servlet Specs 3.0 introduced use of annotations for Servlet Configuration and init parameters. [Java Servlet Tutorial](#)
+2. We can use annotations in Struts 2 to configure it's action classes and result pages. [Struts 2 Hello World Annotation Example](//#)
 
 Reference: https://docs.oracle.com/javase/tutorial/java/annotations/
+<!--
+[Reflection API](https://www.digitalocean.com/community/tutorials/java-reflection-example-tutorial)
+[Jersey](https://www.digitalocean.com/community/tutorials/jersey-java-tutorial)
+[Jersey webservice](https://www.digitalocean.com/community/tutorials/jersey-java-tutorial)
+[Spring](https://www.digitalocean.com/community/tutorials/spring-tutorial-spring-core-tutorial)
+[java8](https://www.digitalocean.com/community/tutorials/java-8-features-with-examples)
+[functional interface](https://www.digitalocean.com/community/tutorials/java-8-functional-interfaces)
+[Java Servlet Tutorial](https://www.digitalocean.com/community/tutorials/servlet-jsp-tutorial)
+[Struts 2 Hello World Annotation Example](https://www.digitalocean.com/community/tutorials/struts-2-hello-world-example-with-annotations-and-without-struts-xml-file)
+-->
