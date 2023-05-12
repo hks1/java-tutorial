@@ -16,6 +16,9 @@
 
 [Chain of Responsibility](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/chainofresponsibility/chain-of-responsibility.md#chain-of-responsibility-design-pattern)
 
+## [Java Modules](https://github.com/hks1/java-tutorial/blob/modules/src/main/java/com/tutorial/modules/modules.md)
+<!-- change this link when merged to main -->
+
 ## [Java Reflection](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/reflection/reflection.md#java-reflection)
 
 ## [Java Annotations](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/annotations/annotations.md#java-annotations)
