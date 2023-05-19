@@ -201,7 +201,45 @@ public class SerializationTest {
 
 Here both variables have different values of the variable `i`. Clearly, there are two instances of our class.
 
-> To solve this issue, we need to include a **`readResolve()`** method in the **DemoSingleton** class. This method will be invoked when we'll de-serialize the object. Inside this method, you must return the existing instance to ensure a single instance application wide. 
+> To solve this issue, we need to include a **`readResolve()`** method in the **DemoSingleton** class. This method will be invoked when we'll de-serialize the object. Inside this method, you must return the existing instance to ensure a single instance application wide.
+
+```java
+import java.io.Serializable;
+
+public class DemoSingleton implements Serializable {
+    public static volatile DemoSingleton instance = null;
+
+    private DemoSingleton() {
+    }
+
+    public static DemoSingleton getInstance() {
+        if (instance == null) {
+            instance = new DemoSingleton();
+        }
+        return instance;
+    }
+
+    protected Object readResolve() {
+        return instance;
+    }
+
+    private int i = 10;
+
+    public int getI() {
+        return i;
+    }
+
+    public void setI(int i) {
+        this.i = i;
+    }
+}
+```
+
+> Now running SerializationTest will output
+```
+20
+20
+```
 
 ## add serialVersionUid to singleton objects
 > this is required in cases where class structure changes between serialization and deserialization

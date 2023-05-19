@@ -13,6 +13,10 @@ public class DemoSingleton implements Serializable {
         }
         return instance;
     }
+
+    protected Object readResolve(){
+        return instance;
+    }
     private int i = 10;
 
     public int getI() {
