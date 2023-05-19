@@ -1,15 +1,15 @@
-# Java
+Java
 
-## Object Creation
+# Object Creation
 <!-- https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html -->
 1. Declaration - associate a variable name with an object type
 2. Instantiation - The `new` keyword is a java operator that creates the object
 3. Initialization - The `new` operator is followed by a call to a constructor, which initializes the new object
 
-### Declaring a Variable to Refer to an Object
+## Declaring a Variable to Refer to an Object
 _type name;_
 
-### Instantiating a Class
+## Instantiating a Class
 - The `new` operator instantiates a class by allocating memory for a new object and returning a reference to that memory. The `new` operator also invokes the object constructor.
 - The `new` operator requires a single, postfix argument: a call to a constructor. The name of the constructor provides the name of the class to instantiate.
 - The `new` operator returns a reference to the object it created. This reference is usually assigned to a variable of the appropriate type, like:
@@ -18,7 +18,7 @@ Point originOne = new Point(23, 94);
 - The reference returned by the `new` operator does not have to be assigned to a variable. It can also be used directly in an expression. For example:
 
 int height = new Rectangle().height;
-### Initializing an Object
+## Initializing an Object
 ```java
 public class Point {
     public int x = 0;
@@ -81,7 +81,7 @@ public class Rectangle {
 
 > All classes have at least one constructor. If a class does not explicitly declare any, the Java compiler automatically provides a no-argument constructor, called the _default constructor_. This default constructor calls the class parent's no-argument constructor, or the `Object` constructor if the class has no other parent. If the parent has no constructor (`Object` does have one), the compiler will reject the program.
 
-## Access Modifiers
+# Access Modifiers
 <!-- https://howtodoinjava.com/java/oops/java-access-modifiers/ -->
 
 Java provides four access modifiers to set access levels for classes, variables, methods and [constructors](https://howtodoinjava.com/java/oops/java-constructors/) i.e. public, private, protected and default.
@@ -111,7 +111,7 @@ Java provides four access modifiers to set access levels for classes, variables,
 - Method level access – allows modifiers to be public, private, protected, or package-private (default).
 
 
-## Design Patterns
+# Design Patterns
 
 [Abstract Factory](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/abstractfactory/abstract-factory-pattern.md#abstract-factory)
 
@@ -129,6 +129,6 @@ Java provides four access modifiers to set access levels for classes, variables,
 
 [Singleton](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/singleton/singleton.md#singleton-design-pattern)
 
-## [Java Reflection](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/reflection/reflection.md#java-reflection)
+# [Java Reflection](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/reflection/reflection.md#java-reflection)
 
-## [Java Annotations](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/annotations/annotations.md#java-annotations)
+# [Java Annotations](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/annotations/annotations.md#java-annotations)
