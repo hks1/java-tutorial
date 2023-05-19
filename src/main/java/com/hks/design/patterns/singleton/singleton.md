@@ -244,8 +244,30 @@ public class DemoSingleton implements Serializable {
 ## add serialVersionUid to singleton objects
 > this is required in cases where class structure changes between serialization and deserialization
 - A changed class structure will cause the JVM to give an exception in the de-serializing process.
+- This problem can be solved only by adding a unique serial version id to the class. It will prevent the compiler from throwing the exception by telling it that both classes are same, and will load the available instance variables only.
 
+## template
 
+```java
+import java.io.Serializable;
+
+public class DemoSingleton implements Serializable{
+    private static final long serialVersionUID = 1L;
+    
+    private DemoSingleton(){} // private constructor
+    
+    private static class DemoSingletonHolder{
+        public static final DemoSingleton INSTANCE = new DemoSingleton();
+    } 
+    
+    public static DemoSingleton getInstance(){
+        return DemoSingletonHolder.INSTANCE;
+    }
+    protected Object readResolve(){
+        return getInstance();
+    }
+}
+```
 
 
 
