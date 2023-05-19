@@ -1,5 +1,86 @@
 # Java
 
+## Object Creation
+<!-- https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html -->
+1. Declaration - associate a variable name with an object type
+2. Instantiation - The `new` keyword is a java operator that creates the object
+3. Initialization - The `new` operator is followed by a call to a constructor, which initializes the new object
+
+### Declaring a Variable to Refer to an Object
+_type name;_
+
+### Instantiating a Class
+- The `new` operator instantiates a class by allocating memory for a new object and returning a reference to that memory. The `new` operator also invokes the object constructor.
+- The `new` operator requires a single, postfix argument: a call to a constructor. The name of the constructor provides the name of the class to instantiate.
+- The `new` operator returns a reference to the object it created. This reference is usually assigned to a variable of the appropriate type, like:
+
+Point originOne = new Point(23, 94);
+- The reference returned by the `new` operator does not have to be assigned to a variable. It can also be used directly in an expression. For example:
+
+int height = new Rectangle().height;
+### Initializing an Object
+```java
+public class Point {
+    public int x = 0;
+    public int y = 0;
+    //constructor
+    public Point(int a, int b) {
+        x = a;
+        y = b;
+    }
+}
+```
+
+`Point originOne = new Point(23, 94);`
+
+![img.png](img.png)
+
+```java
+public class Rectangle {
+    public int width = 0;
+    public int height = 0;
+    public Point origin;
+
+    // four constructors
+    public Rectangle() {
+        origin = new Point(0, 0);
+    }
+    public Rectangle(Point p) {
+        origin = p;
+    }
+    public Rectangle(int w, int h) {
+        origin = new Point(0, 0);
+        width = w;
+        height = h;
+    }
+    public Rectangle(Point p, int w, int h) {
+        origin = p;
+        width = w;
+        height = h;
+    }
+
+    // a method for moving the rectangle
+    public void move(int x, int y) {
+        origin.x = x;
+        origin.y = y;
+    }
+
+    // a method for computing the area of the rectangle
+    public int getArea() {
+        return width * height;
+    }
+}
+```
+
+`Rectangle rectOne = new Rectangle(originOne, 100, 200);`
+
+> an object can have multiple references to it, as shown below
+
+![img_1.png](img_1.png)
+
+
+> All classes have at least one constructor. If a class does not explicitly declare any, the Java compiler automatically provides a no-argument constructor, called the _default constructor_. This default constructor calls the class parent's no-argument constructor, or the `Object` constructor if the class has no other parent. If the parent has no constructor (`Object` does have one), the compiler will reject the program.
+
 ## Access Modifiers
 <!-- https://howtodoinjava.com/java/oops/java-access-modifiers/ -->
 
