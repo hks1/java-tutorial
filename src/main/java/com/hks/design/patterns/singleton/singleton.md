@@ -269,6 +269,9 @@ public class DemoSingleton implements Serializable{
 }
 ```
 
+## Singleton Examples
+- java.awt.Desktop#getDesktop()
+- java.lang.Runtime#getRuntime()
 
 
 
