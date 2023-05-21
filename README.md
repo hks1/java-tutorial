@@ -1,6 +1,6 @@
 Java
 
-# [Java Memory Model]((https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/memorymodel/java-memory-model.md#java-memory-model))
+# [Java Memory Model](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/memorymodel/java-memory-model.md#java-memory-model)
 
 # Object Creation
 <!-- https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html -->
