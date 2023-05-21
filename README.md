@@ -2,7 +2,7 @@ Java
 
 # [Java Memory Model](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/memorymodel/java-memory-model.md#java-memory-model)
 
-# [Java Synchronized Blocks](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/concurrency/syncronized/syncronized.md#syncronized)
+# [Java Synchronized Blocks](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/concurrency/syncronized/synchronized.md#synchronized)
 
 # Object Creation
 <!-- https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html -->
