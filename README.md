@@ -1,5 +1,7 @@
 Java
 
+[Java SE Specifications](https://docs.oracle.com/javase/specs/)
+
 # [Java Memory Model](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/memorymodel/java-memory-model.md#java-memory-model)
 
 # [Java Synchronized Blocks](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/concurrency/syncronized/synchronized.md#synchronized)
