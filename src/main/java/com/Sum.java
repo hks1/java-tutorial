@@ -5,14 +5,23 @@ import com.lc.tree.Tree;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 class Sum{
 
+    public  final Logger LOGGER = Logger.getLogger(this.getClass().getName());
     static class TreeNode{
         TreeNode left;
         TreeNode right;
         TreeNode(int i){}
 
+    }
+
+    {
+        System.out.println(this.getClass());
+        System.out.println(this.getClass().getName());
+        LOGGER.log(Level.INFO, this.getClass().getName());
     }
     public void printSquare(double x){
         System.out.println(x*x);
