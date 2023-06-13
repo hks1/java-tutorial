@@ -1,2 +1,4 @@
 
 Predicate methods
+
+Supplier

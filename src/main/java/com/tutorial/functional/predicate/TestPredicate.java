@@ -2,9 +2,17 @@ package com.tutorial.functional.predicate;
 
 import java.util.function.Predicate;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class TestPredicate {
+    public static final  Logger logger = Logger.getLogger(TestPredicate.class.getName());
+    private static final String TAG = "TestPredicate";
+
 
     public static void main(String[] args) {
+
+        logger.setLevel(Level.INFO);
         // test(T t)
         Predicate<Integer> greater_than = x -> (x > 10);
 
@@ -20,6 +28,8 @@ public class TestPredicate {
         Predicate<Integer> less_100 = x -> (x < 100);
 
         System.out.println(grt_10.and(less_100).test(60));
+
+
 
         // or(Predicate p)
         Predicate<Integer> eq_5 = x -> (x == 5);

@@ -1,6 +1,12 @@
 Java
 
+[Project Valhalla](https://openjdk.org/projects/valhalla/)
+
+[JEP 218: Generics over Primitive Types](https://openjdk.org/jeps/218)
+
 [Java SE Specifications](https://docs.oracle.com/javase/specs/)
+
+[Strings](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/strings/README.md)
 # Design Patterns
 
 [Abstract Factory](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/abstractfactory/abstract-factory-pattern.md#abstract-factory)
