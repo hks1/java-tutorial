@@ -1,4 +1,4 @@
-package com.kickstart.kgoodnessstring.centaturiprime;
+package com.lc.kgoodnessstring.centaturiprime;
 
 import java.util.*;
 

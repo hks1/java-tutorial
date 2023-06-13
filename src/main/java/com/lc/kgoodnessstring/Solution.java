@@ -1,4 +1,4 @@
-package com.kickstart.kgoodnessstring;
+package com.lc.kgoodnessstring;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
