@@ -142,3 +142,16 @@ Java provides four access modifiers to set access levels for classes, variables,
 # [Concurrency](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/concurrency/README.md)
 
 # [volatile keyword](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/concurrency/volatile.md)
+
+# [Functional Interface](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/functional/functional.md)
+
+# [Predicate](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/functional/predicate/predicate.md)
+
+# [Java Record](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/records/Record.md)
+
+# [Constructors](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/constructors/readme.md)
+
+
+
+
+
