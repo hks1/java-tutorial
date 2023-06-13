@@ -1,10 +1,43 @@
 Java
 
 [Java SE Specifications](https://docs.oracle.com/javase/specs/)
+# Design Patterns
+
+[Abstract Factory](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/abstractfactory/abstract-factory-pattern.md#abstract-factory)
+
+[Adaptor](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/adapter/adapter-pattern.md#adapter-pattern)
+
+[Builder](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/builder/builder-pattern.md#builder)
+
+[Factory](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/factory/factory-pattern.md#factory-)
+
+[Factory Method](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/factorymethod/factory-method-pattern.md#factory-method-)
+
+[Observer](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/observer/observer-pattern.md#observer-pattern)
+
+[Chain of Responsibility](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/chainofresponsibility/chain-of-responsibility.md#chain-of-responsibility-design-pattern)
+
+[Singleton](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/singleton/singleton.md#singleton-design-pattern)
 
 # [Java Memory Model](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/memorymodel/java-memory-model.md#java-memory-model)
 
 # [Java Synchronized Blocks](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/concurrency/syncronized/synchronized.md#synchronized)
+
+# [Java Reflection](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/reflection/reflection.md#java-reflection)
+
+# [Java Annotations](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/annotations/annotations.md#java-annotations)
+
+# [Concurrency](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/concurrency/README.md)
+
+# [volatile keyword](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/concurrency/volatile.md)
+
+# [Functional Interface](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/functional/functional.md)
+
+# [Predicate](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/functional/predicate/predicate.md)
+
+# [Java Record](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/records/Record.md)
+
+# [Constructors](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/constructors/readme.md)
 
 # Object Creation
 <!-- https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html -->
@@ -117,39 +150,9 @@ Java provides four access modifiers to set access levels for classes, variables,
 - Method level access – allows modifiers to be public, private, protected, or package-private (default).
 
 
-# Design Patterns
 
-[Abstract Factory](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/abstractfactory/abstract-factory-pattern.md#abstract-factory)
 
-[Adaptor](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/adapter/adapter-pattern.md#adapter-pattern)
 
-[Builder](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/builder/builder-pattern.md#builder)
-
-[Factory](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/factory/factory-pattern.md#factory-)
-
-[Factory Method](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/factorymethod/factory-method-pattern.md#factory-method-)
-
-[Observer](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/observer/observer-pattern.md#observer-pattern)
-
-[Chain of Responsibility](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/chainofresponsibility/chain-of-responsibility.md#chain-of-responsibility-design-pattern)
-
-[Singleton](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/singleton/singleton.md#singleton-design-pattern)
-
-# [Java Reflection](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/reflection/reflection.md#java-reflection)
-
-# [Java Annotations](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/annotations/annotations.md#java-annotations)
-
-# [Concurrency](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/concurrency/README.md)
-
-# [volatile keyword](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/concurrency/volatile.md)
-
-# [Functional Interface](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/functional/functional.md)
-
-# [Predicate](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/functional/predicate/predicate.md)
-
-# [Java Record](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/records/Record.md)
-
-# [Constructors](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/constructors/readme.md)
 
 
 
