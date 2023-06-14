@@ -1,6 +1,5 @@
 package com.utils;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
@@ -71,6 +70,22 @@ public final class Utils {
 
     public static String padLeft(String s, int n) {
         return String.format("%" + n + "s", s); //"%20s"
+    }
+
+
+    /**
+     * @param n
+     * @return sum of square of digits of n
+     * Example: n = 14, return (1 * 1) + (4 * 4)
+     */
+    public static int sumOfSquaredDigits(int n){
+        int sum = 0;
+        while(n > 0){
+            int rem = n % 10;
+            n /= 10;
+            sum += (rem * rem);
+        }
+        return sum;
     }
 
 
