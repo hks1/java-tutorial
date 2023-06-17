@@ -7,7 +7,38 @@ Java
 [Java SE Specifications](https://docs.oracle.com/javase/specs/)
 
 [Strings](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/strings/README.md)
+<!--
+[Arrays](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/arrays/README.md)
 
+[BST Iterator](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/bstiterator/README.md)
+
+[clrs](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/clrs/README.md)
+[ctci](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/ctci/README.md)
+[epi](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/epi/README.md)
+
+[Concurrency](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/concurrency/README.md)
+
+[collections-custom](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/collections/custom/README.md)
+[linkedlist](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/linkedlist/README.md)
+[lru cache](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/lrucache/README.md)
+[minstack](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/minstack/README.md)
+
+[ood](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/ood/README.md)
+[patterns](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/patterns/README.md)
+[problems](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/problems/README.md)
+
+[project euler](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/projecteuler/README.md)
+[prototype](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/prototype/README.md)
+[sort](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/sort/README.md)
+
+[tree](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tree/README.md)
+[trie](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/trie/README.md)
+[union find](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/unionfind/README.md)
+
+[tutorial](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/README.md)
+
+
+-->
 # [Collections](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/collections/collections.md)
 # [Generics](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/generics/README.md)
 # [Java Memory Model](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/memorymodel/java-memory-model.md#java-memory-model)
