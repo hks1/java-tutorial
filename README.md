@@ -40,6 +40,8 @@ https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-lang
 
 [tutorial](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/README.md)
 - Immutability
+- Anonymous Classes
+- Local Classes
 
 
 -->

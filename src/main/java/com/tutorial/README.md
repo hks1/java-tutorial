@@ -2,6 +2,172 @@
 
 # [lambda](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/lambda/README.md)
 
+# Local Classes
+- defined in a _block_, which is a group of zero or more statements between balanced braces.
+
+**Example** </br>
+com.tutorial.localclasses.LocalClassExample
+
+**Accessing Members of an Enclosing Class** </br>
+- A local class has access to the **members** of its enclosing class 
+
+In addition, a local class has access to local variables (variables of the enclosing block - block which local class is part of). 
+However, a local class can only access local variables that are declared _final_.
+
+When a local class accesses a local variable or parameter of the enclosing block, it _captures_ that variable or parameter.
+
+However, starting Java SE 8, a local class can access local variables and parameters of the enclosing block that are final or _effectively_ final.
+A variable or parameter whose value is never changed after it is initialized is effectively final.
+```java
+int numberLength = 10; // is ok as long as it is not modified
+```
+ 
+Starting JAVA SE 8, if a local class is declared in a method, it can access the method's parameters.
+```java
+method {
+        ...
+class PhoneNumber{
+    ...
+    // valid in JDK 8 and later
+    public void printOriginalNumbers(){
+        System.out.println("Original numbers are: " + phoneNumber1 + " and " + phoneNumber2);
+    }
+    ...
+}
+...
+// valid in JDK 8 and later
+        myNumber1.printOriginalNumbers();
+                ...
+        }
+```
+
+**Shadowing and Local Classes** </br>
+
+Declaration of a type (such as a variable) in a local class shadow declarations in the enclosing scope that have the same name.
+
+
+
+<!-- # Shadowing -->
+<!-- https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html#shadowing -->
+Example:
+com.tutorial.shadowing.ShadowTest
+
+# Nested Classes
+<!-- https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html -->
+**Terminology:** Nested classes are divided into two categories:
+- non-static - called _inner classes_
+- static - called _static nested classes_
+
+```java
+class OuterClass{
+    ...
+    class InnerClass{
+        ...
+    }
+    static class StaticNestedClass{
+        ...
+    }
+}
+```
+
+- A nested class is a member of it's enclosing class, even if they are declared private.
+- Non-static nested classes (inner classes) have access to other members of the enclosing class.
+- As a member of the `OuterClass`, a nested class can be declared `private`, `public`, `protected`, or `package private`.
+- outer classes can only be declared as `public` or package private
+
+**Why Use Nested Classes?**
+- It is a way of logically grouping classes that are only used in one place.
+- It increases encapsulation.
+- It can read to more readable and maintainable code.
+
+## Inner Classes
+**an inner class**
+- is associated with an instance of its enclosing class.
+- has direct access to that object's methods and fields.
+- cannot define any static members itself. (because it's associated with an instance)
+
+Objects that are instances of an inner class exist _within_ an instance of the outer class
+
+```java
+class OuterClass {
+    ...
+    class InnerClass {
+        ...
+    }
+}
+```
+**To instantiate an inner class:**
+- first instantiate the outer class
+- then, create the inner object within the outer object with following syntax:
+
+```java
+OuterClass onterObject = new OuterClass();
+OuterClass.InnerClass innerObject = outerObject.new InnerClass();
+```
+
+There are two special kinds of inner classes:
+- **local classes**
+- **anonymous classes**
+
+## Static Nested Classes
+a static nested class
+- is associated with its outer class.
+- cannot refer directly to instance variables or methods defined in it's enclosing class. (It can use them only through an object reference)
+
+> **Note:** A static nested class interacts with the instance members of its outer class (and other classes) just like any other top-level class.
+> In effect, a static nested class is behaviorally a top-level class that has been nested in another top-level class for package convenience.
+
+you instantiate a static nested class the same way as a top-level class. </br>
+StaticNestedClass staticNestedObject = new StaticNestedClass();
+
+## Example
+| com.tutorial.nestedclasses |
+| --- |
+| OuterClass |
+| TopLevelClass |
+| InnerClass |
+| StaticNestedClass |
+
+## Shadowing
+If a declaration of a type (such as a member variable or a parameter name) in a particular scope (such as an inner class or a method definition) has the same name as another declaration in the enclosing scope, 
+then the declaration _shadows_ the declaration of the enclosing scope.
+> A shadowed declaration cannot be referred to by its name alone.
+
+```java
+package com.tutorial.shadowing;
+
+public class ShadowTest {
+    public int x = 0;
+
+    class FirstLevel{
+        public int x = 1;
+
+        void methodInFirstLevel(int x){
+            System.out.println("x: " + x);
+            System.out.println("this.x: " + this.x);
+            System.out.println("ShadowTest.this.x: " + ShadowTest.this.x);
+        }
+    }
+
+    public static void main(String[] args) {
+        ShadowTest st = new ShadowTest();
+        ShadowTest.FirstLevel f1 = st.new FirstLevel();
+        f1.methodInFirstLevel(23);
+    }
+}
+```
+
+output>>
+`
+x: 23
+this.x: 1
+ShadowTest.this.x: 0
+`
+
+## serialization
+<!-- https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html -->
+Serialization of inner classes, including local and anonymous classes, is strongly discouraged. When the Java compiler compiles certain constructs, such as inner classes, it creates synthetic constructs; these are classes, methods, fields, and other constructs that do not have a corresponding construct in the source code. Synthetic constructs enable Java compilers to implement new Java language features without changes to the JVM. However, synthetic constructs can vary among different Java compiler implementations, which means that .class files can vary among different implementations as well. Consequently, you may have compatibility issues if you serialize an inner class and then deserialize it with a different JRE implementation. See the section Implicit and Synthetic Parameters in the section Obtaining Names of Method Parameters for more information about the synthetic constructs generated when an inner class is compiled.
+
 # Anonymous Classes
 <!-- https://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html -->
 
