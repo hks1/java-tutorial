@@ -1,5 +1,8 @@
 Java
 
+TODO: </br>
+https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-lang-oop-patterns
+
 [Project Valhalla](https://openjdk.org/projects/valhalla/)
 
 [JEP 218: Generics over Primitive Types](https://openjdk.org/jeps/218)
@@ -36,6 +39,7 @@ Java
 [union find](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/unionfind/README.md)
 
 [tutorial](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/README.md)
+- Immutability
 
 
 -->
@@ -61,6 +65,7 @@ Java
 
 # [Constructors](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/constructors/readme.md)
 # [varargs](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/varargs/README.md)
+# [lambda](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/lambda/README.md)
 
 # Design Patterns
 
