@@ -24,6 +24,8 @@
          <dependency>
             <groupId>javax.faces</groupId>
             <artifactId>javax.faces</artifactId>
+            <scope>system</scope>
+            <version>1.0</version>
             <systemPath>${basedir}\lib\javax.faces-2.3.0.jar</systemPath>
         </dependency>
 
