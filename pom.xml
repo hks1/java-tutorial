@@ -21,6 +21,12 @@
             <scope>test</scope>
         </dependency>
 
+         <dependency>
+            <groupId>javax.faces</groupId>
+            <artifactId>javax.faces</artifactId>
+            <systemPath>${basedir}\lib\javax.faces-2.3.0.jar</systemPath>
+        </dependency>
+
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
