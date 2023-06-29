@@ -28,6 +28,13 @@
             <scope>system</scope>
             <version>2.3.0</version>
             <systemPath>${basedir}/lib/javax.faces-2.3.0.jar</systemPath>
+        </dependency>
+
+         <dependency>
+            <groupId>junit-jupiter-api</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <scope>system</scope>
+            <version>5.4.2</version>
                   <systemPath>${basedir}/lib/junit-jupiter-api-5.4.2.jar</systemPath>
         </dependency>
 
