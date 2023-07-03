@@ -46,7 +46,7 @@ https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-lang
 
 
 -->
-# Shallow vs. Deep copy and cloune()
+# Shallow vs. Deep copy and clone()
 https://marcus-biel.com/object-clone-method/ </br>
 https://dzone.com/articles/java-copy-shallow-vs-deep-in-which-you-will-swim </br>
 # [Collections](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/collections/collections.md)
