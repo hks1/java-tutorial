@@ -44,7 +44,7 @@ class MedianFinder {
         }
         //System.out.println(":after while" + maxQ + " " + minQ);
     }*/
-    public void addNum(int num) {
+    /*public void addNum(int num) {
         // assumption: maxQ.size() == minQ.size() OR maxQ.size() == minQ.size()
         if(maxQ.size() == 0){
             maxQ.offer(num);
@@ -58,6 +58,13 @@ class MedianFinder {
             // balance heaps
             if(minQ.size() > maxQ.size())
                 maxQ.offer(minQ.poll());
+        }
+    }*/
+
+    public void addNum(int num){
+        maxQ.offer(num);
+        while(maxQ.size() > minQ.size() + 1){
+            minQ.offer(maxQ.poll());
         }
     }
 

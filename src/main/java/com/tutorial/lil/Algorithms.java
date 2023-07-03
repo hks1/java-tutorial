@@ -1,6 +1,6 @@
 package com.tutorial.lil;
 
-import org.junit.jupiter.api.Assertions;
+//import org.junit.jupiter.api.Assertions;
 
 class Data{
     public int return5(){
@@ -76,7 +76,7 @@ public class Algorithms {
     public static void main(String[] args) {
 
         var data = new Data();
-        Assertions.assertEquals(5, data.return5());
+        //Assertions.assertEquals(5, data.return5());
 
         System.out.println(data.isPasswordComplex("Hell0"));
         System.out.println(data.isPasswordComplex("Hello"));

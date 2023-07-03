@@ -69,7 +69,7 @@ https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-lang
 # [varargs](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/varargs/README.md)
 # [lambda](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/lambda/README.md)
 
-# Design Patterns
+# [Design Patterns](https://github.com/hks1/java-tutorial/tree/main/src/main/java/com/hks/design/patterns#readme)
 
 [Abstract Factory](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/abstractfactory/abstract-factory-pattern.md#abstract-factory)
 
