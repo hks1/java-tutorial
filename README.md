@@ -58,6 +58,8 @@ https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-lang
 
 # [volatile keyword](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/concurrency/volatile.md)
 
+# [Thread](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/thread_class/README.md)
+
 # [Functional Interface](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/functional/functional.md)
 
 # [Predicate](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/functional/predicate/predicate.md)
