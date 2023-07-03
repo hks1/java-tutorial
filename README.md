@@ -1,5 +1,6 @@
 Java
 
+
 TODO: </br>
 https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-lang-oop-patterns
 
@@ -55,6 +56,12 @@ https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-lang
 # [Java Annotations](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/annotations/annotations.md#java-annotations)
 
 # [Concurrency](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/concurrency/README.md)
+http://jcip.net.s3-website-us-east-1.amazonaws.com/ </br>
+https://stackoverflow.com/questions/18162863/how-to-run-different-methods-parallely </br>
+https://stackoverflow.com/questions/53557091/how-to-execute-the-same-method-concurrently-in-java </br>
+https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html </br>
+https://docs.oracle.com/javase/tutorial/essential/concurrency/exinter.html
+
 
 # [volatile keyword](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/concurrency/volatile.md)
 
