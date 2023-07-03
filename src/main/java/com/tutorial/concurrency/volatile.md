@@ -8,7 +8,7 @@ and not from the CPU cache,
 and that every write to a volatile variable will be written to main memory, 
 and not just the the CPU cache.
 
-# Varialble visibility problems
+# Variable visibility problems
 
 
 ![img.png](img.png)
@@ -108,6 +108,7 @@ The above happens-before guarantee assures that the visibility guarantee of the 
 The situation where multiple threads are incrementing the same counter is exactly such a situation where a volatile variable is not enough.
 
 Example:
+
 ![img_10.png](img_10.png)
 
 ## When is volatile Enough?
