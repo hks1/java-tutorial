@@ -110,6 +110,8 @@ The _volatile_ keyword does not provide thread safety **when non-atomic operatio
 
 > Example: [com.tutorial.concurrency.SynchronisedExample1](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/concurrency/SynchronisedExample1.java)
 
+> Example: [com.tutorial.concurrency.SynchronisedExample2](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/concurrency/SynchronisedExample2.java)
+
 [race condition](https://jenkov.com/tutorials/java-concurrency/race-conditions-and-critical-sections.html) where multiple threads might read the same value of the volatile variable, generate a new value for the variable, and when writing the value back to main memory - overwrite each other's values.
 
 The situation where multiple threads are incrementing the same counter is exactly such a situation where a volatile variable is not enough.
