@@ -1,0 +1,1 @@
+[object oriented - LSP vs OCP / Liskov Substitution VS Open Close - Software Engineering Stack Exchange](https://softwareengineering.stackexchange.com/questions/178488/lsp-vs-ocp-liskov-substitution-vs-open-close/178515#178515)
