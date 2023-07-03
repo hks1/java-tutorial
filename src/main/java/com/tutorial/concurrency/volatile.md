@@ -103,6 +103,8 @@ The reads / writes before a write to a volatile variable are guaranteed to "happ
 The above happens-before guarantee assures that the visibility guarantee of the volatile keyword are being enforced.
 
 # volatile is not always enough
+> Example: com.tutorial.concurrency.SynchronisedExample1
+
 [race condition](https://jenkov.com/tutorials/java-concurrency/race-conditions-and-critical-sections.html) where multiple threads might read the same value of the volatile variable, generate a new value for the variable, and when writing the value back to main memory - overwrite each other's values.
 
 The situation where multiple threads are incrementing the same counter is exactly such a situation where a volatile variable is not enough.
