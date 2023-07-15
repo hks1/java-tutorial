@@ -108,6 +108,8 @@ List<Player> players = Arrays.asList(player1, player2);
 players.sort(comparator);
 ```
 
+# [List](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/collections/collection/list/list.md)
+
 ## Iterable
 
 ## Iterator
