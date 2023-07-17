@@ -1,3 +1,5 @@
+<!-- https://docs.oracle.com/javase/8/docs/technotes/guides/collections/index.html -->
+
 # Collections
 
 ## Comparator and Comparable
@@ -107,6 +109,8 @@ Player player2 = new Player(67, "Roger", -1);
 List<Player> players = Arrays.asList(player1, player2);
 players.sort(comparator);
 ```
+
+# [List](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/collections/collection/list/list.md)
 
 ## Iterable
 

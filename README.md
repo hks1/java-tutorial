@@ -1,5 +1,66 @@
 Java
 
+**Hackerrank problem template**
+```java
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Result {
+
+    /*
+     * Complete the 'reverseArray' function below.
+     *
+     * The function is expected to return an INTEGER_ARRAY.
+     * The function accepts INTEGER_ARRAY a as parameter.
+     */
+
+    public static List<Integer> reverseArray(List<Integer> a) {
+    // Write your code here
+        List<Integer> result = new ArrayList<>();
+        for(int i = a.size()-1; i >= 0; i--){
+            result.add(a.get(i));
+        }
+        return result;
+
+    }
+
+}
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        
+        int arrCount = Integer.parseInt(bufferedReader.readLine().trim());
+
+        List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+            .map(Integer::parseInt)
+            .collect(toList());
+
+        List<Integer> res = Result.reverseArray(arr);
+
+        bufferedWriter.write(
+            res.stream()
+                .map(Object::toString)
+                .collect(joining(" "))
+            + "\n"
+        );
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
+```
+
+
 TODO: </br>
 https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-lang-oop-patterns
 
@@ -45,6 +106,9 @@ https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-lang
 
 
 -->
+# Shallow vs. Deep copy and clone()
+https://marcus-biel.com/object-clone-method/ </br>
+https://dzone.com/articles/java-copy-shallow-vs-deep-in-which-you-will-swim </br>
 # [Collections](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/collections/collections.md)
 # [Generics](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/generics/README.md)
 # [Java Memory Model](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/memorymodel/java-memory-model.md#java-memory-model)
@@ -55,8 +119,16 @@ https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-lang
 # [Java Annotations](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/annotations/annotations.md#java-annotations)
 
 # [Concurrency](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/concurrency/README.md)
+http://jcip.net.s3-website-us-east-1.amazonaws.com/ </br>
+https://stackoverflow.com/questions/18162863/how-to-run-different-methods-parallely </br>
+https://stackoverflow.com/questions/53557091/how-to-execute-the-same-method-concurrently-in-java </br>
+https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html </br>
+https://docs.oracle.com/javase/tutorial/essential/concurrency/exinter.html
+
 
 # [volatile keyword](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/concurrency/volatile.md)
+
+# [Thread](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/thread_class/README.md)
 
 # [Functional Interface](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/functional/functional.md)
 
@@ -69,7 +141,7 @@ https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-lang
 # [varargs](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/varargs/README.md)
 # [lambda](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/lambda/README.md)
 
-# Design Patterns
+# [Design Patterns](https://github.com/hks1/java-tutorial/tree/main/src/main/java/com/hks/design/patterns#readme)
 
 [Abstract Factory](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/hks/design/patterns/abstractfactory/abstract-factory-pattern.md#abstract-factory)
 
