@@ -5,6 +5,9 @@ package com.tutorial.concurrency.syncronized;
 public class SynchronizedExample2 {
 
     static volatile int count = 0;
+    // the following increment operation  is not atomic
+    // It performs three operations –
+    // read, update, and then write the new value of the variable to the main memory.
     public static void increment(){
         count++;
     }
@@ -41,3 +44,5 @@ public class SynchronizedExample2 {
         System.out.println("value of count variable is " + count);
     }
 }
+
+// https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-concurrency-advanced-4
