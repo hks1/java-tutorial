@@ -1,33 +1,3 @@
-<!-- https://www.educative.io/answers/what-is-the-supplier-functional-interface-in-java -->
-
-> `Supplier` is a functional interface that produces output without accepting any input
-
-> The interface contains one method `get()`
-
-https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html
-
-**Syntax:**
-
-T get()
-
-```java
-import java.util.Random;
-import java.util.function.*;
-
-public class Main{
-    public static void main(String[] args) {
-        // Supplier interface implementation that generates random integer value
-        Supplier<Integer> randomSupplier = () -> new Random().nextInt();
-        int count = 5;
-
-        // Calling get method to get the random value
-        while(count-- > 0) System.out.println(randomSupplier.get());
-
-    }
-}
-```
-
-```java
 package com.tutorial.functional.supplier;
 
 import com.tutorial.def.Example6;
@@ -65,5 +35,3 @@ class Employee{
                 '}';
     }
 }
-
-```
