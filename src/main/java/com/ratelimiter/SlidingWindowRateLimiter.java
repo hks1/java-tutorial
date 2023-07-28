@@ -3,12 +3,12 @@ package com.ratelimiter;
 import java.util.LinkedList;
 import java.util.Queue;
 
-class RateLimiter {
+class SlidingWindowRateLimiter {
     private int rateLimit;
     private int timeframe;
     private Queue<Long> requests;
 
-    public RateLimiter(int rateLimit, int timeframe) {
+    public SlidingWindowRateLimiter(int rateLimit, int timeframe) {
         this.rateLimit = rateLimit;
         this.timeframe = timeframe;
         this.requests = new LinkedList<>();

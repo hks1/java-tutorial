@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
-    static Map<String, RateLimiter> rateLimiterMap;
+    static Map<String, SlidingWindowRateLimiter> rateLimiterMap;
     public static void main(String[] args) throws InterruptedException {
         rateLimiterMap = new HashMap<>();
         String[][] userDetails = new String[][] {{"user1", "10", "1"},
@@ -19,10 +19,10 @@ public class Main {
             Integer timeFrame = Integer.valueOf(userDetail[2]);
 
             if(!rateLimiterMap.containsKey(user)){
-                rateLimiterMap.put(user, new RateLimiter(rateLimit, timeFrame));
+                rateLimiterMap.put(user, new SlidingWindowRateLimiter(rateLimit, timeFrame));
             }
 
-            Thread thread = new Thread(new ExecuteRequests(user, rateLimiterMap.get(user)));
+            Thread thread = new Thread(new ExecuteRequestsForSlidingWindow(user, rateLimiterMap.get(user)));
             thread.start();
             /*int success = 0;
             int fail = 0;
@@ -45,7 +45,7 @@ public class Main {
     }
 
     //public void executeRequests(String user, int rateLimit, int timeFrame) throws InterruptedException {
-    public void executeRequests(String user, RateLimiter limiter) throws InterruptedException {
+    public void executeRequests(String user, SlidingWindowRateLimiter limiter) throws InterruptedException {
         int success = 0;
         int fail = 0;
         long start = System.currentTimeMillis();
