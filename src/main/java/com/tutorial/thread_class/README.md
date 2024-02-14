@@ -1,3 +1,7 @@
+// thread
+
+https://stackoverflow.com/questions/877096/how-can-i-pass-a-parameter-to-a-java-thread
+
 > public final void join() throws InterruptedException
 Waits for this thread to die.
 

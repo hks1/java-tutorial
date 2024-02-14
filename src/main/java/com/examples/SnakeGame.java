@@ -90,3 +90,14 @@ public class SnakeGame {
         System.out.println(obj.set.iterator().next().equals(obj.snake.peek()));
     }
 }
+
+/*
+["SnakeGame","move","move"]
+[[2,2,[[0,1]]],["R"],["D"]]
+
+["SnakeGame","move","move","move","move","move"]
+[[2,2,[[1,0]]],["R"],["D"],["L"],["U"],["R"]]
+
+["SnakeGame","move","move","move","move","move","move","move","move","move","move","move","move"]
+[[3,3,[[2,0],[0,0],[0,2],[2,2]]],["D"],["D"],["R"],["U"],["U"],["L"],["D"],["R"],["R"],["U"],["L"],["D"]]
+ */
