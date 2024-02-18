@@ -24,12 +24,18 @@ public class LRUCache<K,V> {
     }
 
     public void put(K key,V value){
-        LRUNode<K, V> node = new LRUNode<>(key, value);
+        //LRUNode<K, V> node = new LRUNode<>(key, value);
+        LRUNode<K, V> node;
 
         if(kvMap.containsKey(key)){
-            kvMap.put(key, node);
+            //kvMap.put(key, node);
+            node = kvMap.get(key);
+            kvMap.get(key).setValue(value);
             extractAndRemove(node);
+            return;
+            //extractAndRemove(node);
         } else {
+            node = new LRUNode<>(key, value);
             if(kvMap.size() == this.capacity){
                 System.out.println("cache full:: " + kvMap.size());
                 kvMap.remove(tail.key);
