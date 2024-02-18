@@ -58,6 +58,6 @@ public class FixedWindowRateLimiter implements IRateLimiter{
         }
 
         System.out.println(Instant.now());
-        
+
     }
 }
