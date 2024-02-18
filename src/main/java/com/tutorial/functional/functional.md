@@ -17,3 +17,8 @@ Predicate methods
 
 [**Supplier**](https://github.com/hks1/java-tutorial/blob/main/src/main/java/com/tutorial/functional/supplier/suppleir.md)
 [java.util.function.Supplier]
+
+Function.identity()
+
+https://stackoverflow.com/questions/28032827/java-8-lambdas-function-identity-or-t-t
+
