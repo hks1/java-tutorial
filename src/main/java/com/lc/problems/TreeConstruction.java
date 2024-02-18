@@ -52,6 +52,19 @@ public class TreeConstruction {
 
         return root;
     }
+    public void print(TreeNode root){
+        System.out.println(root.val);
+        printHelper(root, 0, 0);
+    }
+
+    public void printHelper(TreeNode root, int level, int side){
+        if (root == null) return;
+        // 0-> root, 1 -> left, 2 -> right
+        System.out.print(root.val + " " + level + " " + side + "\n");
+        printHelper(root.left, level+1, 1);
+        printHelper(root.right, level+1, 2);
+
+    }
 }
 
 class TDTreeConstruction{
@@ -66,5 +79,9 @@ class TDTreeConstruction{
         //System.out.println(com.lc.tree.Traversal.preorderTraversal(root2));
 
         //System.out.println(com.lc.tree.Traversal.preorderTraversal(root));
+        System.out.println("root: ");
+        obj.print(root);
+        System.out.println("root1: ");
+        obj.print(root1);
     }
 }
