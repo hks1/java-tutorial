@@ -3,60 +3,67 @@ package com.ratelimiter;
 import java.util.concurrent.TimeUnit;
 
 public class TokenBucketRateLimiter {
-    final int capacity;
-    final double refillRatePerMilliSecond;
-    double tokens;
-    long lastRefillTimestamp;
+    private final int capacity;
+    private final double refillRate;
+    private double tokens;
+    private long lastRefillTimestamp;
 
     public TokenBucketRateLimiter(int capacity, double refillRate){
         this.capacity = capacity;
-        this.tokens = capacity;
-        this.refillRatePerMilliSecond = refillRate; // refillRate per millisecond -  default
-        this.lastRefillTimestamp = System.currentTimeMillis();
+        this.refillRate = refillRate;
+        tokens = this.capacity;
+        lastRefillTimestamp = System.currentTimeMillis();
     }
     // https://www.geeksforgeeks.org/timeunit-class-in-java-with-examples/
 
+
     public TokenBucketRateLimiter(int capacity, double refillRate, TimeUnit timeUnit){
         this(capacity, refillRate / timeUnit.toMillis(1));
+        // convert refill rate to tokens per millisecond for consistent calculation
+        //this.refillRate = refillRate / timeUnit.toMillis(1);
+        System.out.println("refillrate: " +this.refillRate);
     }
 
-    public synchronized  boolean tryConsume(){
+    public synchronized boolean tryConsume(int tokensRequired){
         refillTokens();
-        if(tokens >= 1.0){
-            tokens -= 1.0;
+        if(tokensRequired <= tokens){
+            tokens -= tokensRequired;
             return true;
         }
         return false;
     }
 
+    public synchronized boolean tryConsume(){
+        return this.tryConsume(1);
+    }
+
     public void refillTokens(){
         long currentTime = System.currentTimeMillis();
         long timeElapsed = currentTime - lastRefillTimestamp;
-        double tokensToAdd = refillRatePerMilliSecond * timeElapsed;
+        double tokensToAdd = (timeElapsed / 1000.0) * refillRate;
         tokens = Math.min(capacity, tokens + tokensToAdd);
+        System.out.println(timeElapsed + " tokenToAdd: " + tokensToAdd + " tokens: " + tokens );
         lastRefillTimestamp = currentTime;
     }
 
-    public static void main(String[] args) throws InterruptedException {
-        TokenBucketRateLimiter limiter = new TokenBucketRateLimiter(50, 10, TimeUnit.SECONDS);
-
-        int success = 0;
-        int fail = 0;
+    public static void main(String[] args) throws InterruptedException{
+        //TokenBucketRateLimiter limiter = new TokenBucketRateLimiter(100, 10);
+        TokenBucketRateLimiter limiter = new TokenBucketRateLimiter(100, 10, TimeUnit.SECONDS );
         long start = System.currentTimeMillis();
-        for(int i = 1; i <= 120; i++){
-            if (limiter.tryConsume()){
+        int success = 0, fail = 0;
+
+        for (int i = 0; i < 120; i++) {
+            if(limiter.tryConsume()){
+                System.out.println("Request processed ->" + i);
                 success++;
-                System.out.println("request allowed..." + i);
             }else {
+                System.out.println("rate limit exceeded ->" + i);
                 fail++;
-                System.out.println("request failed..." + i);
             }
-            Thread.sleep(50);
+
+            Thread.sleep(500);
         }
         long end = System.currentTimeMillis();
-        long timeElapsed = end - start;
-        System.out.println(timeElapsed + " ::success: " + success + ", failed: " + fail);
+        System.out.println(end - start + " success: " + success + " fail: " + fail);
     }
-
-
 }

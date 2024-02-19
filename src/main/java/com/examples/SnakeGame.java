@@ -7,6 +7,7 @@ public class SnakeGame {
     int width;
     int height;
     int[][] food;
+    int foodIndex;
     Queue<Pair> snake;
     Set<Pair> set;
 
@@ -44,17 +45,42 @@ public class SnakeGame {
         this.width = width;
         this.height = height;
         this.food = food;
+        foodIndex = 0;
         snake  = new LinkedList<>();
         set = new HashSet<>();
         currentPosition = new Pair(0,0);
-        /*snake.offer(new Pair(0,0));
-        set.add(new Pair(0,0));*/
-        snake.offer(currentPosition);
-        set.add(currentPosition);
+        snake.offer(new Pair(0,0));
+        set.add(new Pair(0,0));
 
     }
 
     public int move(String direction) {
+        switch (direction){
+            case "U":
+                this.currentPosition.r--;
+                break;
+            case "D":
+                this.currentPosition.r++;
+                break;
+            case "L":
+                this.currentPosition.c--;
+                break;
+            case "R":
+                this.currentPosition.c++;
+                break;
+            default:
+                System.out.println("Invalid move!!!");
+        }
+        int r = this.currentPosition.r;
+        int c = this.currentPosition.c;
+        if(r < 0 || r >= width || c < 0 || c >= height){
+            return -1;
+        }
+        if(r == food[foodIndex][0] && c == food[foodIndex][1]){
+            foodIndex++;
+        }else{
+            set.remove(snake.poll());
+        }
 
         return 0;
     }
